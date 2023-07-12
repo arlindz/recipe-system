@@ -27,7 +27,8 @@ const chefApplicationRouter = require('./routes/chefApplicationRoutes');
 const initRecipesRouter = require('./routes/initRecipesRoutes');
 const notificationRouter = require('./routes/notificationRoutes');
 const chefInsightsRouter = require('./routes/insightsRoutes');
-
+const personRouter = require('./routes/personRoutes');
+const bankRouter = require('./routes/bankaRoutes');
 const app = express();
 const uploadDirectory = path.join(__dirname, 'uploads');
 const chefApplicationsDirectory = path.join(uploadDirectory, 'chefApplications');
@@ -54,7 +55,8 @@ app.use('/api/initRecipes', initRecipesRouter);
 app.use('/api/follow', followRouter);
 app.use('/api/notifications', notificationRouter);
 app.use('/api/insights', chefInsightsRouter);
-
+app.use('/api/person', personRouter);
+app.use('/api/bank', bankRouter);
 app.use('/images', express.static(uploadDirectory));
 app.use('/images/chefApplications', (req, res, next) => {
     const token = req.query.token;
