@@ -31,6 +31,8 @@ import Notifications from './components/Notifications';
 import EditUser from './components/EditUser';
 import ChangePassword from './components/ChangePassword';
 import DashboardRecipe from './components/DashboardRecipe';
+import AddBank from './components/AddBank';
+import AddPerson from './components/AddPerson';
 function App() {
   const [userId, setUserId] = useState(localStorage.getItem('userId'));
   return (
@@ -65,6 +67,8 @@ function App() {
           <Route path='/dashboard/recipes' element={<DashboardRecipe />} />
           <Route path='/me/edit' element={<EditUser />} />
           <Route path='/me/password' element={<ChangePassword />} />
+          <Route path='/dashboard/person' element={<AddPerson />} />
+          <Route path='/dashboard/bank' element={<AddBank />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         {

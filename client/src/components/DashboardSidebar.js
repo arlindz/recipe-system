@@ -58,6 +58,24 @@ export default function DashboardSidebar() {
                             Contacts
                         </a>
                     </li>
+                    <li className={getLastPartOfUrl(window.location.href) === 'chefApplications' ? `py-4 rounded-lg bg-gray-800` : ''}>
+                        <a
+                            href="/dashboard/person"
+                            className="flex items-center text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2 px-4"
+                        >
+                            <FontAwesomeIcon icon={faUtensils} className="mr-4" />
+                            Person
+                        </a>
+                    </li>
+                    <li className={getLastPartOfUrl(window.location.href) === 'chefApplications' ? `py-4 rounded-lg bg-gray-800` : ''}>
+                        <a
+                            href="/dashboard/bank"
+                            className="flex items-center text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2 px-4"
+                        >
+                            <FontAwesomeIcon icon={faUtensils} className="mr-4" />
+                            Bank
+                        </a>
+                    </li>
                 </ul>
                 <div className="absolute bottom-0 py-4 px-8">
                     <p className="text-xs text-gray-400">© 2023 Magnolia. All rights reserved.</p>
